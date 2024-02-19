@@ -9,6 +9,46 @@
 .inter-font{
   font-family: 'Inter', sans-serif;
 }
-#banner{
-   border-radius: 40px;
+/* banner section starts  */
+#banner-photo{
+  height: 550px;
+  width: 1170px;
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%), url("/images/banner.png");
+}
+
+
+
+@media screen and (max-width: 600px)
+{
+    #banner-photo{
+      width: 600px;
+      height: 300px;
+      background-size: cover;
+    }
+    #banner-heading{
+      width: 390px;
+     position: absolute;
+     font-size: 24px;
+     /* top: 40px; */
+     bottom: -100px;
+     left: -100px;
+    }
+    #banner-paragraph{
+      width: 390px;
+      position: absolute;
+      font-size: 14px;
+      /* top: 40px; */
+      bottom: -150px;
+      left: -150px;
+      margin-top: 0px;
+    }
+    #banner-button{
+      position: absolute;
+      font-size: 14px;
+      /* top: 40px; */
+      bottom: -220px;
+      left: -20px;
+      width: 120px;
+    }
 }
