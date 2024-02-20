@@ -26,7 +26,55 @@
  padding-top: 120px;
 }
 
+/* Coupon design starts here  */
+.coupon-container{
+  background-image: url("../images/Rectangle\ 8.png");
+  height: 220px;
+  width: 573px;
+  display: flex;
+  padding-left: 70px;
+}
+.coupon-heading{
+  color: rgba(3, 7, 18, 0.80);
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 900;
+}
+.coupon-sub-heading{
+  color: rgba(3, 7, 18, 0.80);
+  font-family: Inter;
+  font-size: 20px;
+  font-weight: 600;
+}
+.coupon-paragraph
+{
+  color: rgba(3, 7, 18, 0.50);
+font-family: Inter;
+font-size: 18px;
+font-weight: 500;
+}
+.coupon-heading1{
+  color: var(--base-black, #030712);
+font-family: Raleway;
+font-size: 32px;
+font-weight: 700;
+}
 
+.coupon-paragraph1
+{
+  color: var(--base-black, rgba(3, 7, 18, 0.40));
+font-family: Raleway;
+font-size: 20px;
+font-weight: 500;
+}
+
+.coupun-container1{
+  background-image: url("../images/Rectangle\ 9.png");
+  height: 220px;
+  width: 573px;
+  display: flex;
+  padding-left: 70px;
+}
 
 @media screen and (max-width: 600px)
 {
