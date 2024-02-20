@@ -68,14 +68,14 @@ font-size: 20px;
 font-weight: 500;
 }
 
-.coupun-container1{
+.coupon-container1{
   background-image: url("../images/Rectangle\ 9.png");
   height: 220px;
   width: 573px;
   display: flex;
   padding-left: 70px;
 }
-
+ /* main content starts here  */
 @media screen and (max-width: 600px)
 {
     #banner-photo{
@@ -103,5 +103,25 @@ font-weight: 500;
       margin-bottom: 50px;
       margin-left: auto;
       margin-right: auto;
+    }
+    .coupon-container{
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto;
+    }
+    .coupon-container1{
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: auto;
+    }
+    .coupon-heading{
+      font-size: 24px;
+      font-weight: 800;
+    }
+    .coupon-sub-heading{
+      font-size: 16px;
+      font-weight: 500;
     }
 }
