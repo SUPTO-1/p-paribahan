@@ -14,7 +14,16 @@
   height: 550px;
   width: 1170px;
   border-radius: 32px;
-  background: linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%), url("../images/banner.png");
+  background: linear-gradient(180deg, rgba(3, 7, 18, 0.50) 0%, rgba(3, 7, 18, 0.00) 100%),url("../images/banner.png");
+}
+#banner-heading{
+  margin-bottom: 20px;
+}
+#banner-paragraph{
+  margin-bottom: 50px;
+}
+#banner-text-container{
+ padding-top: 120px;
 }
 
 
@@ -22,33 +31,29 @@
 @media screen and (max-width: 600px)
 {
     #banner-photo{
-      width: 600px;
-      height: 300px;
+      width: 100%;
       background-size: cover;
+      background-repeat: no-repeat;
+      height: auto;
+    }
+    #banner-text-container{
+      padding-top: 60px;
     }
     #banner-heading{
-      width: 390px;
-     position: absolute;
-     font-size: 24px;
-     /* top: 40px; */
-     bottom: -100px;
-     left: -100px;
+      font-size: 24px;
+      margin-bottom: 20px;
     }
     #banner-paragraph{
-      width: 390px;
-      position: absolute;
       font-size: 14px;
-      /* top: 40px; */
-      bottom: -150px;
-      left: -150px;
-      margin-top: 0px;
+      margin-bottom: 30px;
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
     }
     #banner-button{
-      position: absolute;
       font-size: 14px;
-      /* top: 40px; */
-      bottom: -220px;
-      left: -20px;
-      width: 120px;
+      margin-bottom: 50px;
+      margin-left: auto;
+      margin-right: auto;
     }
 }
