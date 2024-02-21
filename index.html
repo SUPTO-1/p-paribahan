@@ -197,7 +197,7 @@
                 id="navbar-button"
                 class="btn btn-secondary text-[#1DD100] raleway-font font-bold px-5"
                 ><img src="images/seat-green.png" alt=""
-              /> 40 Seats Left </a>
+              /> <span id="available-seats">40</span>  Seats Left</a>
               </div>
             </div>
             <!-- for form part  -->
@@ -287,19 +287,19 @@
             <div class="flex gap-16">
               <div class="flex gap-8">
               <div class="w-[110px] h-[56px]">
-                <button id="A1" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">A1</button>
+                <button onclick="ticketKataStarts('A1')" id="A1" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">A1</button>
               </div>
               <div class="w-[110px] h-[56px]">
-                <button id="A2" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">A2</button>
+                <button onclick="ticketKataStarts('A2')" id="A2" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">A2</button>
               </div>
             </div>
             <!-- last 2 seat  -->
             <div class="flex gap-8">
               <div class="w-[110px] h-[56px]">
-                <button id="A3" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">A3</button>
+                <button onclick="ticketKataStarts('A3')" id="A3" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">A3</button>
               </div>
               <div class="w-[110px] h-[56px]">
-                <button id="A4" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">A4</button>
+                <button onclick="ticketKataStarts('A4')" id="A4" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">A4</button>
               </div>
             </div>
             </div>
@@ -314,19 +314,19 @@
             <div class="flex gap-16">
               <div class="flex gap-8">
               <div class="w-[110px] h-[56px]">
-                <button id="B1" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">B1</button>
+                <button onclick="ticketKataStarts('B1')" id="B1" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">B1</button>
               </div>
               <div class="w-[110px] h-[56px]">
-                <button id="B2" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">B2</button>
+                <button onclick="ticketKataStarts('B2')" id="B2" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">B2</button>
               </div>
             </div>
             <!-- last 2 seat  -->
             <div class="flex gap-8">
               <div class="w-[110px] h-[56px]">
-                <button id="B3" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">B3</button>
+                <button onclick="ticketKataStarts('B3')" id="B3" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">B3</button>
               </div>
               <div class="w-[110px] h-[56px]">
-                <button id="B4" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal">B4</button>
+                <button onclick="ticketKataStarts('B4')" id="B4" class="btn btn-active text-center pl-[45px] pr-[45px] pt-[17px] pb-[17px] text-[18px] inter-font font-normal bg-gray-300">B4</button>
               </div>
             </div>
             </div>
@@ -343,7 +343,7 @@
               <!-- first part of grand price  -->
               <div class="flex justify-between mb-6">
                 <div>
-                  <p class="text-[16px] inter-font font-medium">Seat <span class="text-[#1DD100]">0</span></p>
+                  <p class="text-[16px] inter-font font-medium">Seat <span id="selected-seat" class="text-[#1DD100]">0</span></p>
                 </div>
                 <div>
                   <p class="text-[16px] inter-font font-medium">Class</p>
@@ -427,12 +427,39 @@
 
     <!-- footer starts -->
     <footer>
-      <section class="bg-black">
-        <div>
-          <h1 class="text-white text-3xl raleway-font font-bold">P-Ticket</h1>
-          <p class="text-[18px] text-white inter-font">P-Ticket is a digital platform to make your daily commuting better.</p>
+      <section class="bg-black px-[135px] py-[120px]">
+        <div class="flex justify-between mb-10">
+          <div>
+            <h1 class="text-white text-3xl raleway-font font-bold">P-Ticket</h1>
+          <p class="text-[18px] text-white inter-font w-[374px]">P-Ticket is a digital platform to make your daily commuting better.</p>
+          </div>
+          <div>
+            <div>
+              <h3 class="text-white text-[20px] raleway-font font-semibold mb-6">Download our app</h3>
+            </div>
+            <div class="flex">
+              <div>
+                <img src="images/playstore.png" alt="">
+              </div>
+              <div>
+                <h3 class="text-white raleway-font font-semibold text-[14px]">GET IT ON</h3>
+                <h1 class="text-white raleway-font font-semibold text-2xl">GOOGLE PLAY</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-b-2 border-gray-400 border-dashed mb-6"></div>
+        <div class="flex justify-between">
+          <div>
+            <p class="text-white text-[14px] raleway-font">@all rights reserved, P-Ticket services limited.2024</p>
+          </div>
+          <div>
+            <p class="text-white text-[14px] raleway-font">Terms & condition | Return & Refund Policy | Privacy Policy</p>
+          </div>
         </div>
       </section>
     </footer>
+
+    <script src="scripts/main.js"></script>
   </body>
 </html>
