@@ -151,7 +151,16 @@ function nextClick()
 function continueTeJao()
 {
     const ticketKata = document.getElementById("ticket-kata");
-    ticketKata.style.display = "none";
+    ticketKata.classList.add('hidden');
+    // homeSection.classList.add('hidden');
     const success = document.getElementById("successful");
-    success.style.display = "block";
+    success.classList.remove('hidden');
+}
+function nextClickKoro()
+{
+    const success = document.getElementById("successful");
+    success.classList.add('hidden');
+    const ticketKata = document.getElementById("ticket-kata");
+    ticketKata.classList.remove('hidden');
+    // homeSection.classList.add('hidden');
 }
