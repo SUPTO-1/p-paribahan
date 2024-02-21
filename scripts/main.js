@@ -19,6 +19,7 @@ function setBackgroundColor(id)
           increaseSelectedSeat();
           decreaseAvailableSeats();
           setTicketInformation(id);
+          setTotalPrice();
         }
         else
         {
@@ -96,4 +97,61 @@ function setTicketInformation(id)
     newP2.innerText = "550";
     newDiv1.append(newH1,newP1,newP2);
     document.getElementById("seat-information-container").append(newDiv1);
+}
+function setTotalPrice()
+{
+    const total = document.getElementById("total");
+    const totalPrice = total.innerText;
+    let totalPriceInt = parseInt(totalPrice);
+    totalPriceInt+=550;
+    total.innerText = totalPriceInt;
+    const grandTotal = document.getElementById("grand");
+    grandTotal.innerText = totalPriceInt;
+}
+function applyCoupon()
+{
+    const coupon = document.getElementById("coupon");
+    const couponValue = coupon.value;
+    if(couponValue == "NEW15")
+    {
+        const total = document.getElementById("grand");
+        const totalPrice = total.innerText;
+        let totalPriceInt = parseInt(totalPrice);
+        totalPriceInt = (totalPriceInt*85)/100;
+        total.innerText = totalPriceInt;
+        const couponSection = document.getElementById("coupon-section");
+        couponSection.style.display = "none";
+    }
+    else if(couponValue == "Couple 20")
+    {
+        const total = document.getElementById("grand");
+        const totalPrice = total.innerText;
+        let totalPriceInt = parseInt(totalPrice);
+        totalPriceInt = (totalPriceInt*80)/100;
+        total.innerText = totalPriceInt;
+        const couponSection = document.getElementById("coupon-section");
+        couponSection.style.display = "none";
+    }
+}
+function nextClick()
+{
+    const passenger = document.getElementById("passenger");
+    const passengerValue = passenger.value;
+    const phone = document.getElementById("phone");
+    const phoneValue = phone.value;
+    if(passengerValue.length == 0 || phoneValue.length == 0)
+    {
+        alert("Please Fill All The Name & Phone Number");
+    }
+    else
+    {
+        continueTeJao();
+    }
+}
+function continueTeJao()
+{
+    const ticketKata = document.getElementById("ticket-kata");
+    ticketKata.style.display = "none";
+    const success = document.getElementById("successful");
+    success.style.display = "block";
 }
