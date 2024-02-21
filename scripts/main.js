@@ -85,7 +85,7 @@ function setTicketInformation(id)
 {
     const seatName = id;
     let newDiv1 = document.createElement("div");
-    newDiv1.setAttribute("class","flex justify-between mb-6");
+    newDiv1.setAttribute("class","child-div flex justify-between mb-6");
     let newH1 = document.createElement("h1");
     newH1.setAttribute("class","text-[16px] inter-font font-medium");
     let newP1 = document.createElement("p");
